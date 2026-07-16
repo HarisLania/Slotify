@@ -1,0 +1,26 @@
+# BookEase — Python dependencies (latest stable as of mid-2026)
+
+# Core framework
+Django==5.2.4
+djangorestframework==3.16.0
+
+# JWT authentication
+djangorestframework-simplejwt==5.5.0
+
+# API schema / Swagger UI + Redoc
+drf-spectacular==0.28.0
+
+# Environment variable management (keeps secrets out of source)
+django-environ==0.12.0
+
+# CORS support for the customer-facing booking frontend
+django-cors-headers==4.7.0
+
+# Image handling for Business.logo (ImageField)
+Pillow==11.3.0
+
+# Production WSGI server (used when DEBUG=False / PRODUCTION=True)
+gunicorn==23.0.0
+
+# PostgreSQL driver (production). SQLite is used for local/testing by default.
+psycopg[binary]==3.2.9

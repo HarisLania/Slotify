@@ -1,0 +1,23 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Environments
+.venv/
+venv/
+env/
+
+# Secrets — never commit real environment files
+.env
+
+# Local database & media
+db.sqlite3
+db.sqlite3-journal
+/media/
+/staticfiles/
+
+# IDE / OS cruft
+.idea/
+.vscode/
+.DS_Store
