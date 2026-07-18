@@ -8,14 +8,19 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import include, path
+from django.http import HttpResponse
 from drf_spectacular.views import (
     SpectacularAPIView,
     SpectacularRedocView,
     SpectacularSwaggerView,
 )
 
+def health_check(request):
+    return HttpResponse("OK", status=200)
+
 urlpatterns = [
     path("admin/", admin.site.urls),
+    path("health/", health_check, name="health-check"),
 
     # --- Auth (register / login / refresh / me) -------------------------
     path("api/auth/", include("users.urls")),
